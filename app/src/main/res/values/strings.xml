@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Simple TODO List</string>
+    <string name="page_1_title">Simple ToDo</string>
+    <string name="page_2_title">Edit Item</string>
+    <string name="add">ADD</string>
+    <string name="add_item">Add a new item...</string>
+    <string name="edit_text">Edit Text Below:</string>
+    <string name="edit">EDIT</string>
+</resources>
