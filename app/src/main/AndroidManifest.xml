@@ -3,10 +3,19 @@
     package="com.example.lixudong.todoapp">
 
     <application
+        android:name="com.activeandroid.app.Application"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data android:name="AA_DB_NAME"
+            android:value="ToDoItem.db"/>
+        <meta-data android:name="AA_DB_VERSION"
+            android:value="1"/>
+        <meta-data android:name="AA_MODELS"
+            android:value="com.example.lixudong.todoapp.model.Item"/>
+
         <activity android:name=".MainActivity"
             android:label="@string/page_1_title">
             <intent-filter>

@@ -15,13 +15,13 @@ public class EditItemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_item);
         editText = (EditText) findViewById(R.id.editText);
-        editText.setText(getIntent().getStringExtra("EditContent"));
+        editText.setText(getIntent().getStringExtra("EditTitle"));
     }
 
     public void onEditItem(View view) {
         String updatedText = editText.getText().toString();
         Intent data = new Intent();
-        data.putExtra("UpdatedText", updatedText);
+        data.putExtra("UpdatedTitle", updatedText);
         data.putExtra("Position", getIntent().getExtras().getInt("EditPosition"));
         setResult(RESULT_OK, data);
         finish();
