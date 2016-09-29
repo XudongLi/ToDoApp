@@ -49,7 +49,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this, EditItemActivity.class);
-                intent.putExtra("EditTitle", toDoItems.get(position).title);
+                Item toEdit = toDoItems.get(position);
+                intent.putExtra("EditTitle", toEdit.title);
+                intent.putExtra("EditDate", toEdit.date);
                 intent.putExtra("EditPosition", position);
                 startActivityForResult(intent, REQUEST_CODE);
             }
@@ -61,8 +63,10 @@ public class MainActivity extends AppCompatActivity {
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
             int position = data.getExtras().getInt("Position");
             String updatedTitle = data.getExtras().getString("UpdatedTitle");
+            String updatedDate = data.getExtras().getString("UpdatedDate");
             Item toUpdate = toDoItems.get(position);
             toUpdate.title = updatedTitle;
+            toUpdate.date = updatedDate;
             toUpdate.save();
             aToDoAdapter.notifyDataSetChanged();
         }

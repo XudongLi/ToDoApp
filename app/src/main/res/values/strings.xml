@@ -4,6 +4,7 @@
     <string name="page_2_title">Edit Item</string>
     <string name="add">ADD</string>
     <string name="add_item">Add a new item...</string>
-    <string name="edit_text">Edit Text Below:</string>
+    <string name="edit_title">Task Name</string>
+    <string name="edit_date">Due Date</string>
     <string name="edit">EDIT</string>
 </resources>

@@ -13,13 +13,17 @@ public class Item extends Model {
     @Column(name = "description")
     public String description;
 
+    @Column(name = "createDate")
+    public String date;
+
     public Item() {
         super();
     }
 
-    public Item(String title, String description) {
+    public Item(String title, String description, String date) {
         super();
         this.title = title;
         this.description = description;
+        this.date = date;
     }
 }
