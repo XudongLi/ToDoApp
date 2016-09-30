@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
                 Item toEdit = toDoItems.get(position);
                 intent.putExtra("EditTitle", toEdit.title);
                 intent.putExtra("EditDate", toEdit.date);
+                intent.putExtra("EditPriority", toEdit.priority);
+                intent.putExtra("EditDescribe", toEdit.description);
                 intent.putExtra("EditPosition", position);
                 startActivityForResult(intent, REQUEST_CODE);
             }
@@ -64,9 +66,13 @@ public class MainActivity extends AppCompatActivity {
             int position = data.getExtras().getInt("Position");
             String updatedTitle = data.getExtras().getString("UpdatedTitle");
             String updatedDate = data.getExtras().getString("UpdatedDate");
+            String updatedPriority = data.getExtras().getString("UpdatedPriority");
+            String updatedDescribe = data.getExtras().getString("UpdatedDescribe");
             Item toUpdate = toDoItems.get(position);
             toUpdate.title = updatedTitle;
             toUpdate.date = updatedDate;
+            toUpdate.priority = updatedPriority;
+            toUpdate.description = updatedDescribe;
             toUpdate.save();
             aToDoAdapter.notifyDataSetChanged();
         }

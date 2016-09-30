@@ -6,5 +6,7 @@
     <string name="add_item">Add a new item...</string>
     <string name="edit_title">Task Name</string>
     <string name="edit_date">Due Date</string>
+    <string name="edit_priority">Priority</string>
+    <string name="edit_note">Take some note</string>
     <string name="edit">EDIT</string>
 </resources>

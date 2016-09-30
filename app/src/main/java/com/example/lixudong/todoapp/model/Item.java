@@ -16,14 +16,18 @@ public class Item extends Model {
     @Column(name = "createDate")
     public String date;
 
+    @Column(name = "priority")
+    public String priority;
+
     public Item() {
         super();
     }
 
-    public Item(String title, String description, String date) {
+    public Item(String title, String description, String date, String priority) {
         super();
         this.title = title;
         this.description = description;
         this.date = date;
+        this.priority = priority;
     }
 }

@@ -25,8 +25,11 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         }
 
         TextView tvTitle = (TextView) convertView.findViewById(R.id.tvTitle);
-
-        tvTitle.setText(item.title);
+        if(item.priority != null) {
+            tvTitle.setText(item.title + "          (" + item.priority + ")");
+        } else {
+            tvTitle.setText(item.title);
+        }
 
         return convertView;
     }
